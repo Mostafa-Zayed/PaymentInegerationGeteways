@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 namespace App\Interfaces;
 
 interface SettingInterface
 {
-    public function editShippingMethod();
+    public function index();
 }

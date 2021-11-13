@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Models\Currency;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Inerfaces\CurrencyInerface;
+use App\Interfaces\CurrencyInerface;
 
 class CurrencyController extends Controller
 {

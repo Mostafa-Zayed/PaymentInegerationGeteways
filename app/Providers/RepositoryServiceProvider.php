@@ -15,7 +15,7 @@ class RepositoryServiceProvider extends ServiceProvider
     {
         /* Currency */
         $this->app->bind(
-            'App\Inerfaces\CurrencyInerface',
+            'App\Interfaces\CurrencyInerface',
             'App\Repositories\CurrencyRepository'
         );
 
@@ -37,35 +37,47 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Repositories\PaypalRepository'
         );
 
-        /* Unit */
+         /* Category */
+         $this->app->bind(
+             'App\Interfaces\CategoryInterface',
+             'App\Repositories\CategoryRepository'
+         );
+
+         /* Sub Category */
+         $this->app->bind(
+             'App\Interfaces\SubCategoryInterface',
+             'App\Repositories\SubCategoryRepository'
+         );
+
+         /* Child Category */
         $this->app->bind(
-            'App\Interfaces\UnitInterface',
-            'App\Repositories\UnitRepository'
+            'App\Interfaces\ChildCategoryInterface',
+            'App\Repositories\ChildCategoryRepository'
         );
 
-        /* Color */
-        $this->app->bind(
-            'App\Interfaces\ColorInterface',
-            'App\Repositories\ColorRepository'
-        );
+         /* Setting */
+         $this->app->bind(
+             'App\Interfaces\SettingInterface',
+             'App\Repositories\SettingRepository'
+         );
+        // /* Unit */
+        // $this->app->bind(
+        //     'App\Interfaces\UnitInterface',
+        //     'App\Repositories\UnitRepository'
+        // );
 
-        /* Category */
-        $this->app->bind(
-            'App\Interfaces\CategoryInterface',
-            'App\Repositories\CategoryRepository'
-        );
+        // /* Color */
+        // $this->app->bind(
+        //     'App\Interfaces\ColorInterface',
+        //     'App\Repositories\ColorRepository'
+        // );
 
-        /* Sub Category */
-        $this->app->bind(
-            'App\Interfaces\SubCategoryInterface',
-            'App\Repositories\SubCategoryRepository'
-        );
 
-        /* Setting */
-        $this->app->bind(
-            'App\Interfaces\SettingInterface',
-            'App\Repositories\SettingRepository'
-        );
+
+
+
+
+
     }
 
     /**

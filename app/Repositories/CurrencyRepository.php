@@ -2,11 +2,11 @@
 
 namespace App\Repositories;
 
-use App\Inerfaces\CurrencyInerface;
+use App\Interfaces\CurrencyInerface;
 
 class CurrencyRepository implements CurrencyInerface
 {
-    // for testing now 
+    // for testing now
     public function index()
     {
         dd('crruncy index ');

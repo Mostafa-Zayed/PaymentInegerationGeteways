@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Inerfaces\PaypalInterface;
+use App\Interfaces\PaypalInterface;
 
 class PaypalRepository implements PaypalInterface
 {

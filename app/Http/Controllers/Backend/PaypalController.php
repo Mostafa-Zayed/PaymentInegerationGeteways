@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Inerfaces\PaypalInterface;
+use App\Interfaces\PaypalInterface;
 
 class PaypalController extends Controller
 {
@@ -12,7 +12,7 @@ class PaypalController extends Controller
 
     public function __construct(PaypalInterface $paypalInterface)
     {
-        $this->paypalInterface = $paypalInterface;        
+        $this->paypalInterface = $paypalInterface;
     }
 
     public function payment()

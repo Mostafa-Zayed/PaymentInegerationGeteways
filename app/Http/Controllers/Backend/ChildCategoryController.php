@@ -1,12 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
-use App\Models\ChildCategory;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Interfaces\ChildCategoryInterface;
 
 class ChildCategoryController extends Controller
 {
+
+    private  $childCategoryInterface;
+
+    public function __construct(ChildCategoryInterface $childCategoryInterface)
+    {
+        $this->childCategoryInterface = $childCategoryInterface;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +22,7 @@ class ChildCategoryController extends Controller
      */
     public function index()
     {
-        //
+        return $this->childCategoryInterface->index();
     }
 
     /**
@@ -41,10 +49,10 @@ class ChildCategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ChildCategory  $childCategory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(ChildCategory $childCategory)
+    public function show($id)
     {
         //
     }
@@ -52,10 +60,10 @@ class ChildCategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\ChildCategory  $childCategory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(ChildCategory $childCategory)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +72,10 @@ class ChildCategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ChildCategory  $childCategory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ChildCategory $childCategory)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +83,10 @@ class ChildCategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ChildCategory  $childCategory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ChildCategory $childCategory)
+    public function destroy($id)
     {
         //
     }

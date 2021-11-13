@@ -1,12 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
 use App\Models\GetewaySetting;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Interfaces\GetewaySettingInterface;
 
 class GetewaySettingController extends Controller
 {
+    private $getewaySettingInterface;
+
+    public function __construct(GetewaySettingInterface $getewaySettingInerface)
+    {
+        $this->getewaySettingInterface = $getewaySettingInerface;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +22,7 @@ class GetewaySettingController extends Controller
      */
     public function index()
     {
-        //
+        return $this->getewaySettingInterface->index();
     }
 
     /**

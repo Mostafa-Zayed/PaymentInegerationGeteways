@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Repositories;
 
@@ -6,8 +6,8 @@ use App\Interfaces\SettingInterface;
 
 class SettingRepository implements SettingInterface
 {
-    public function editShippingMethod()
+    public function index()
     {
-        dd('editShippingMethod');
+        dd('setting');
     }
 }

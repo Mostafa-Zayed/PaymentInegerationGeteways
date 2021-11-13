@@ -1,12 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
-use App\Models\SubCategory;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Interfaces\SubCategoryInterface;
 
 class SubCategoryController extends Controller
 {
+    private $subCategoryInterface;
+
+    public function __construct(SubCategoryInterface $subCategoryInterface)
+    {
+        $this->subCategoryInterface = $subCategoryInterface;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +21,7 @@ class SubCategoryController extends Controller
      */
     public function index()
     {
-        //
+        return $this->subCategoryInterface->index();
     }
 
     /**
@@ -41,10 +48,10 @@ class SubCategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\SubCategory  $subCategory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(SubCategory $subCategory)
+    public function show($id)
     {
         //
     }
@@ -52,10 +59,10 @@ class SubCategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\SubCategory  $subCategory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(SubCategory $subCategory)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +71,10 @@ class SubCategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\SubCategory  $subCategory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, SubCategory $subCategory)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +82,10 @@ class SubCategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\SubCategory  $subCategory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SubCategory $subCategory)
+    public function destroy($id)
     {
         //
     }

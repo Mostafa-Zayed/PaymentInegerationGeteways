@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Models\Geteway;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Inerfaces\GetewayInterface;
+use App\Interfaces\GetewayInterface;
 
 class GetewayController extends Controller
 {

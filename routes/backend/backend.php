@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Backend\CurrencyController;
+use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\SettingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +22,7 @@ Route::get('/',function(){
 });
 
 Route::get('/currency',[CurrencyController::class,'index']);
+Route::resource('categories',CategoryController::class)->where(['category' => '[0-9]+']);
+Route::group(['prefix' => 'settings'] , function(){
+    Route::get('shipping-methods/{type}',[SettingController::class,'editShippingMethod']);
+});

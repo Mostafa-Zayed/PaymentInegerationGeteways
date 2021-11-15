@@ -6,6 +6,8 @@ use App\Http\Controllers\Backend\GetewayController;
 use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\GetewaySettingController;
 use App\Http\Controllers\Backend\PaypalController;
+use App\Http\Controllers\Backend\StripeController;
+use App\Http\Controllers\Backend\FatoorahController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Backend\ChildCategoryController;
 use Illuminate\Support\Facades\Route;
@@ -34,3 +36,6 @@ Route::resource('categories',CategoryController::class);
 Route::resource('sub-categories',SubCategoryController::class);
 Route::resource('child-categories',ChildCategoryController::class);
 Route::resource('settings',SettingController::class);
+
+Route::get('/stripe',[StripeController::class,'index']);
+Route::get('/fatoorah',[FatoorahController::class,'index']);

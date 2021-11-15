@@ -18,6 +18,10 @@ trait PaymentGetewayTrait
             'query' => $queryParams
         ]);
 
+        if (method_exists($this,'authorization')) {
+            $this->authorization($queryParams,$formParams,$headers);
+        }
+
         return $response->getBody()->getContents();
     }
 }

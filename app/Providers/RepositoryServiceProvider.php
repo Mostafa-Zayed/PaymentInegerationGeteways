@@ -37,6 +37,18 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Repositories\PaypalRepository'
         );
 
+        /* Stripe Geteway */
+        $this->app->bind(
+            'App\Interfaces\StripeInterface',
+            'App\Repositories\StripeRepository'
+        );
+
+        /* Fatoorah Geteway */
+        $this->app->bind(
+            'App\Interfaces\FatoorahInterface',
+            'App\Repositories\FatoorahRepository'
+        );
+
          /* Category */
          $this->app->bind(
              'App\Interfaces\CategoryInterface',

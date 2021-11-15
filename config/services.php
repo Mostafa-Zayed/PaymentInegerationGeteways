@@ -34,6 +34,19 @@ return [
         'base_url' => env('PAYPAL_BASE_URL'),
         'client_id' => env('PAYPAL_CLIENT_ID'),
         'client_secret' => env('PAYPAL_CLIENT_SECRET')
+    ],
+    
+    'stripe' => [
+        'base_url' => env('STRIPE_BASE_URL'),
+        'key' => env('STRIPE_KEY'),
+        'secret' => env('STRIPE_SECRET')
+    ] ,
+
+    'fatoorah' => [
+        'base_url' => env('FATOORAH_BASE_URL'),
+        'token' => env('FATOORAH_TOKEN'),
+        'error_url' => env('FATOORAH_ERROR_URL'),
+        'success_url' => env('FATOORAH_SUCCESS_URL')
     ]
 
 ];
